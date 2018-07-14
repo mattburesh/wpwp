@@ -14,6 +14,8 @@ Pretty much everything. This is real barebones right now.
 
 ## Getting Started
 
+This mostly something I'm putting together for my own purposes, but if you want to check it out here's what you need.
+
 ### Requirements
 
 I've done all of my work with the following setup:
