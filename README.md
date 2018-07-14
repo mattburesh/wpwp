@@ -4,7 +4,7 @@ WordPack is a WordPress starter theme with webpack bundling.
 
 ## Todo
 
-Pretty much everything. None of this is working just yet.
+Pretty much everything. None of this is working yet.
 
 ## Getting Started
 
