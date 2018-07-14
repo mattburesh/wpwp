@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package WordPack
+ * @package WPwp
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses wordpack_header_style()
+ * @uses wpwp_header_style()
  */
-function wordpack_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'wordpack_custom_header_args', array(
+function wpwp_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'wpwp_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'wordpack_header_style',
+		'wp-head-callback'       => 'wpwp_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'wordpack_custom_header_setup' );
+add_action( 'after_setup_theme', 'wpwp_custom_header_setup' );
 
-if ( ! function_exists( 'wordpack_header_style' ) ) :
+if ( ! function_exists( 'wpwp_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see wordpack_custom_header_setup().
+	 * @see wpwp_custom_header_setup().
 	 */
-	function wordpack_header_style() {
+	function wpwp_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

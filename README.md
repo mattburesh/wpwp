@@ -1,6 +1,6 @@
-# WordPack
+# WPwp
 
-WordPack is a boilerplate WordPress starter theme, for getting up and running with webpack 4.
+WPwp is a boilerplate WordPress starter theme, for getting up and running with webpack 4.
 
 ## Features
 

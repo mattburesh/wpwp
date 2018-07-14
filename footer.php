@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package WordPack
+ * @package WPwp
  */
 
 ?>
@@ -15,16 +15,16 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wordpack' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpwp' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wordpack' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'wpwp' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wordpack' ), 'wordpack', '<a href="http://mburesh.com">Matthew Buresh</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wpwp' ), 'wpwp', '<a href="http://mburesh.com">Matthew Buresh</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
