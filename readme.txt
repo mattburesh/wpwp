@@ -25,7 +25,6 @@ Description
 
 = Does this theme support any plugins? =
 
-WordPack includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

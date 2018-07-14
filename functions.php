@@ -104,15 +104,7 @@ add_action( 'after_setup_theme', 'wordpack_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function wordpack_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'wordpack' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'wordpack' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+
 }
 add_action( 'widgets_init', 'wordpack_widgets_init' );
 
@@ -127,6 +119,16 @@ function wordpack_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wordpack_scripts' );
+
+/**
+ * Removes dashicons for unauthenticated users.
+ */
+add_action( 'wp_enqueue_scripts', 'wordpack_dequeue_dashicons' );
+function wordpack_dequeue_dashicons() {
+	if ( ! is_user_logged_in() ) {
+		wp_deregister_style( 'dashicons' );
+	}
+}
 
 /**
  * Implement the Custom Header feature.
@@ -147,10 +149,3 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
